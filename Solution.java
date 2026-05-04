@@ -3,7 +3,6 @@ public class Solution {
     public void rotate(int[][] matrix) {
         int n = matrix.length;
 
-        // Transpose
         for (int i = 0; i < n; i++) {
             for (int j = i + 1; j < n; j++) {
                 int temp = matrix[i][j];
@@ -12,7 +11,6 @@ public class Solution {
             }
         }
 
-        // Reverse rows
         for (int i = 0; i < n; i++) {
             int left = 0, right = n - 1;
             while (left < right) {
@@ -36,7 +34,7 @@ public class Solution {
 
         obj.rotate(matrix);
 
-        // Print output
+        
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix.length; j++) {
                 System.out.print(matrix[i][j] + " ");
